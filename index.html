@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adaptive Smart Classroom</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Adaptive Smart Classroom</h1>
+
+        <p>
+            Customize your learning experience
+        </p>
+
+        <div class="voice-section">
+            
+            <h2>🎤 Voice Input</h2>
+            <p>
+                Say your preferences, for example:
+                "Beginner, AI, Quiz, 30 minutes"
+            </p>
+
+            <button type="button" onclick="startVoiceInput()">
+                🎤 Start Voice Input
+            </button>
+
+            <p id="voiceStatus"></p>
+
+    </div>
+
+
+    <div class="gesture-section">
+
+        <h2>✋ Hand Gesture Interaction</h2>
+
+        <p>
+           Use hand gestures to interact with the classroom.
+        </p>
+
+        <button type="button" onclick="startHandGesture()">
+            ✋ Start Hand Gesture
+        </button>
+
+        <button type="button" onclick="stopHandGesture()">
+            🛑 Stop Hand Gesture
+        </button>
+
+        <p id="gestureStatus"></p>
+
+        <video id="gestureVideo" autoplay playsinline></video>
+
+    </div>
+
+    <div class="form-section">
+
+            <label for="subject">Subject</label>
+            <select id="subject">
+                <option value="">Select Subject</option>
+                <option value="ai">Artificial Intelligence</option>
+                <option value="programming">Programming</option>
+                <option value="math">Mathematics</option>
+            </select>
+
+            <label for="level">Learning Level</label>
+            <select id="level">
+                <option value="">Select Level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <label for="mode">Learning Mode</label>
+            <select id="mode">
+                <option value="">Select Mode</option>
+                <option value="notes">Notes</option>
+                <option value="video">Video</option>
+                <option value="quiz">Quiz</option>
+            </select>
+
+            <label for="time">Available Time</label>
+            <select id="time">
+                <option value="">Select Time</option>
+                <option value="30">30 Minutes</option>
+                <option value="60">1 Hour</option>
+                <option value="120">2+ Hours</option>
+            </select>
+
+            <button onclick="adaptClassroom()">
+                Create My Learning Plan
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+        <div class="action-section">
+
+        <h2>Classroom Controls</h2>
+
+            <button type="button" onclick="nextTopic()">
+                Next Topic →
+            </button>
+
+            <button type="button" onclick="previousTopic()">
+                ← Previous Topic
+            </button>
+
+            <button type="button" onclick="confirmSelection()">
+                👍 Confirm Selection
+            </button>
+
+            <button type="button" onclick="pauseClassroom()">
+                🖐️ Pause Classroom
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

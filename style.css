@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #768ceb, #c2a9da);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #4338ca;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+
+.container > p {
+    text-align: center;
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.voice-section {
+    background: #f5f6ff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #e5e7ff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.voice-section h2 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.voice-section p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.voice-section button {
+    width: auto;
+    padding: 12px 25px;
+}
+
+.gesture-section {
+    background: #f5f6ff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+    border: 1px solid #e5e7ff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.gesture-section h2 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.gesture-section p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.gesture-section button {
+    width: auto;
+    padding: 12px 25px;
+    margin: 5px;
+}
+
+#gestureVideo {
+    display: none;
+    width: 320px;
+    max-width: 100%;
+    margin: 20px auto 0;
+    border-radius: 12px;
+}
+
+.action-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8f9ff;
+    border-radius: 15px;
+    border: 1px solid #e5e7ff;
+    text-align: center;
+}
+
+.action-section h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.action-section button {
+    width: auto;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    background: #fafaff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e5e7ff;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+select {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #e2e4f0;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+    color: #374151;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+select:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8d89dc, #7c3aed);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+}
+
+#result {
+    margin-top: 30px;
+}
+
+.message {
+    background: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result-card {
+    background: #f8f9ff;
+    border-left: 6px solid #6366f1;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.5s ease;
+}
+
+.result-card h2 {
+    color: #4f46e5;
+    margin-bottom: 20px;
+}
+
+.result-card p {
+    margin: 10px 0;
+    color: #444;
+}
+
+.result-card h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.result-card ul {
+    padding-left: 20px;
+}
+
+.result-card li {
+    margin: 10px 0;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
